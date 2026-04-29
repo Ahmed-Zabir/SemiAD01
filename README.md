@@ -26,11 +26,11 @@ training, using a comparison-based PatchCore approach.
 
 ## Results
 
-| Subset | Image AUROC | F1 | Recall | Specificity |
-|---|---|---|---|---|
-| Wafer | 0.9073 | 0.3411 | 0.8542 | 0.7784 |
-| Ball Side | 0.8110 | 0.2489 | 0.7160 | 0.7393 |
-| Chip Side | 0.7833 | 0.1070 | 0.7687 | 0.6538 |
+Subset    | Image AUROC | Pixel AUROC | PRO Score | Recall | F1
+----------|-------------|-------------|-----------|--------|-------
+Wafer     | 0.9073      | 0.98        | 0.8298    | 0.8542 | 0.3411
+Ball Side | 0.8110      | 0.99        | 0.3966    | 0.7160 | 0.2489
+Chip Side | 0.7833      | 0.95        | 0.3691    | 0.7687 | 0.1070
 
 **Key finding:** High recall across all subsets confirms strong defect 
 sensitivity. Low precision reflects a conservative threshold — the model 
