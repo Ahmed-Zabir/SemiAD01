@@ -1,0 +1,19 @@
+# Environment
+semiad_env/
+
+# Large model files
+memory_banks/
+scores/
+
+# System files
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Data
+*.npy
+*.pt
