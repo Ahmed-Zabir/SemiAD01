@@ -54,6 +54,8 @@ meaningful gain in Pixel AUROC.
 
 ## Dataset
 **Semi-AD** — IEEE DataPort  
+(https://ieee-dataport.org/documents/semi-ad-semiconductor-anomaly-detection-dataset)
+
 Three subsets: IC substrate ball-side, IC substrate chip-side, patterned wafer  
 Provides aligned reference-test pairs and pixel-level ground truth masks
 
@@ -65,7 +67,7 @@ Provides aligned reference-test pairs and pixel-level ground truth masks
 | 01_EDA | Dataset exploration, image pair visualisation, ground truth masks |
 | 02_PatchCore | Memory bank construction, anomaly scoring, full metric evaluation |
 | 03_PatchCore_GaussianSmoothing | Smoothing experiment — tested and rejected |
-| 04_Test_Single_Image | Single image tester with verdict thresholds |
+| 04_Test | Image tester, Best/worst/false positive visualisation and Matrics scores |
 
 ---
 
@@ -75,4 +77,24 @@ Python 3.9 | PyTorch | torchvision | scikit-learn | NumPy | Matplotlib | PIL
 ---
 
 ## Project Structure
+SemiAD01/
+├── notebooks/     ← analysis notebooks
+├── reports/       ← saved figures and results
+├── memory_banks/  ← excluded (regenerate from notebook 02)
+└── scores/        ← excluded (regenerate from notebook 02)
 
+---
+
+## Limitations & Next Steps
+- Low precision due to score distribution overlap between normal and defect
+- pair_set untouched — reserved for Siamese network implementation
+- Next: comparison-based Siamese network using reference-test pairs to 
+  reduce false positives and improve precision
+
+---
+
+## Author
+**Ahmed Zabir Hussain** — Physics & Data Science  
+Part of the SemiSight semiconductor analytics platform  
+[SemiSight Repository](https://github.com/Ahmed-Zabir/SemiSight)  
+Open to research collaborations and consulting engagements in semiconductor analytics.
